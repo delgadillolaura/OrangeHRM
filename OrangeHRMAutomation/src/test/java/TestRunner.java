@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/",
         glue = {"stepDefinitions"},
-        //tags= "@deleteEmployee"
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class TestRunner {
