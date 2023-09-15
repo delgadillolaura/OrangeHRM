@@ -14,12 +14,6 @@ import java.util.List;
 public class AdminPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//label[text()='Username']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']/div/input[@class='oxd-input oxd-input--active']")
-    WebElement userNameTextBox;
-
-    @FindBy(xpath = "//div[@data-v-6c07a142='']")
-    WebElement userNameText;
-
     @FindBy(xpath = "//label[text()='User Role']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']/div/div[@class='oxd-select-wrapper']")
     WebElement userRoleDropdown;
 
@@ -44,18 +38,6 @@ public class AdminPage {
     public AdminPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
-    }
-
-    public void setUserNameTextBox(String userName) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(userNameTextBox));
-        userNameTextBox.sendKeys(userName);
-    }
-
-    public boolean verifyUserNameTextIsDisplayed(String userName) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(userNameText));
-        return userName.equals(userNameText.getText());
     }
 
     public void selectUserRole(String userRole) {

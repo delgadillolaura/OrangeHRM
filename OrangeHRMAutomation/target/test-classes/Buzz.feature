@@ -1,4 +1,4 @@
-Feature: PIM Orange HRM App
+Feature: Buzz Orange HRM App
 
   Background: User should be able to publish a post
     Given I am in Orange HRM web page
@@ -7,7 +7,7 @@ Feature: PIM Orange HRM App
     And I click on the login button
 
   @publishPost
-  Scenario: Add an employee
+  Scenario: Publish a post
     Given I click on the Buzz link
     And I fill the post text area with "Esto es una prueba"
     And I click on the Post button

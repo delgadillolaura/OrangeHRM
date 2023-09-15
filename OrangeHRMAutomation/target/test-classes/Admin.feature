@@ -1,4 +1,4 @@
-Feature: PIM Orange HRM App
+Feature: Admin Orange HRM App
 
   Background: User should be able to search employees
     Given I am in Orange HRM web page
